@@ -1,5 +1,5 @@
 ## Project Beta - Using Machine Learning models like Tensorflow Keras LSTM and Pyflux Beta-t-EGARCH to predict the best time to buy Apple Stock over a period of time.
-![Project Beta](images/projectbeta.png)
+![Project Beta](Images/projectbeta.png)
 ---
 By Andre Bacellar, Cristina Pitu, Lucca Tatoni, Lucas Shaiman, and Serra Battal.
 ---
@@ -32,15 +32,17 @@ Vanguard Information Technology ETF | VGT
 ---
 Here is how our stocks was correlated.
 Correlation Matrix:
-![Correlation Matrix](images/correlation.png)
+![Correlation Matrix](Images/correlation.png)
 Out of our free resources at hand we were able to use 3 full years worth of good data in order to train our LSTM model. With unlimited resources we’d like to have 10+ years to have a more robust model.
 # Our Models LSTM & Beta-t-EGARCH
+
 ### __PyFlux library change__
 PyFlux’s last update was in 2018, thus it is not up to date with the most current Python lingo.
-__*To update it, it was needed to change one file of the library (data_check.py), substituting ‘ix’ for ‘iloc’.
+To update it, it was needed to change one file of the library (data_check.py), substituting ‘ix’ for ‘iloc’.
 In order to update the file on your end, please follow the steps below:
-locate where your Python Libraries are stored. You can use the command python3 -c ‘import sysconfig; print(sysconfig.get_paths()[“purelib”])’
-navigate to the PyFlux folder and either paste the data_check.py file that is uploaded in the GitHub repo or open the py file and make the change mentioned above (substitute ix for iloc).*__
+- Locate where your Python Libraries are stored. For that, you can use the command `python3 -c ‘import sysconfig; print(sysconfig.get_paths()[“purelib”])’`
+- Navigate to the PyFlux folder and either paste the data_check.py file that is uploaded in the GitHub repo or open the py file and make the change mentioned above (substitute ix for iloc).*
+
 ## Tensorflow LSTM
 - Our LSTM had a very common problem that many run into trying to predict the stock market, not enough data.
 - LSTM models are great for our autoregressive or random data that doesn’t have any rhyme or reason to it however, it tries its best to find patterns.
@@ -52,6 +54,7 @@ navigate to the PyFlux folder and either paste the data_check.py file that is up
 - PyFlux’s models have been abandoned since 2017 however we wanted to try to use something not touched on in class to see if it would yield us anything interesting.
 - Beta-t-EGARCH focuses primarily on stabilizing volatility.
 - Using Beta-t-EGARCH helps us identify outliers and not react sharply to large swings and random events - which will be helpful for automating in the future.
+
 >[PyFlux - Beta-t-EGARCH](https://pyflux.readthedocs.io/en/latest/egarch.html#:~:text=Beta%2Dt%2DEGARCH%20models%20were,of%20the%20t%2Ddistribution%20score.)
 ---
 # The Signals - How signals are generated
@@ -75,3 +78,4 @@ navigate to the PyFlux folder and either paste the data_check.py file that is up
 > b
 > c
 > d
+
