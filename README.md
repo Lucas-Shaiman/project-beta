@@ -1,5 +1,5 @@
 ## Project Beta - Using Machine Learning models like Tensorflow Keras LSTM and Pyflux Beta-t-EGARCH to predict the best time to buy Apple Stock over a period of time.
-![Project Beta](Images/projectbeta.png)
+![Project Beta](Resources/Images/projectbeta.png)
 ---
 By Andre Bacellar, Cristina Pitu, Lucca Tatoni, Lucas Shaiman, and Serra Battal.
 ---
@@ -32,7 +32,7 @@ Vanguard Information Technology ETF | VGT
 ---
 Here is how our stocks was correlated.
 Correlation Matrix:
-![Correlation Matrix](Images/correlation.png)
+![Correlation Matrix](Resources/Images/correlation.png)
 Out of our free resources at hand we were able to use 3 full years worth of good data in order to train our LSTM model. With unlimited resources we’d like to have 10+ years to have a more robust model.
 # Our Models LSTM & Beta-t-EGARCH
 
@@ -47,22 +47,24 @@ In order to update the file on your end, please follow the steps below:
 - Our LSTM had a very common problem that many run into trying to predict the stock market, not enough data.
 - LSTM models are great for our autoregressive or random data that doesn’t have any rhyme or reason to it however, it tries its best to find patterns.
 - Due to our insufficient data and model parameters, we expereinced a lot of overfitting and various offsets from our predicted and real values.
-![insertphoto]()
+![Tensorflow LSTM](Resources/Images/TensorflowLSTM.png)
 >[StackOverflow](https://stackoverflow.com/questions/54368686/lstm-having-a-systematic-offset-between-predictions-and-ground-truth)
 >[TensorFlow - LSTM](https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM)
 ## PyFlux Beta-t-EGARCH
 - PyFlux’s models have been abandoned since 2017 however we wanted to try to use something not touched on in class to see if it would yield us anything interesting.
+![PyFlux Absolute Returns](Resources/Images/aapl_absolute_returns.png)
 - Beta-t-EGARCH focuses primarily on stabilizing volatility.
+![PyFlux Volatility](Resources/Images/aapl_returns_volatility.png)
 - Using Beta-t-EGARCH helps us identify outliers and not react sharply to large swings and random events - which will be helpful for automating in the future.
-
+![PyFlux Model](Resources/Images/pyflux_model.png)
 >[PyFlux - Beta-t-EGARCH](https://pyflux.readthedocs.io/en/latest/egarch.html#:~:text=Beta%2Dt%2DEGARCH%20models%20were,of%20the%20t%2Ddistribution%20score.)
 ---
 # The Signals - How signals are generated
-![insertphoto]()
+![Signals](Resources/Images/Signals.JPG)
 # How it works and how trades are executed
 1. Cloud API running model sends signal
 2. Alpaca Trade API receives signal
-    * Trade is fulfilled
+    * Trade is fullfilled
     * Trade us confirmed
 3. Trade is documented and profit/loss is measured
 ---
