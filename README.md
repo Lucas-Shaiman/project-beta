@@ -72,14 +72,19 @@ In order to update the file on your end, please follow the steps below:
 ![Portfolio Evaluation](Resources/Images/portfolio_evaluation.png)
 ![AAPL Trade Evaluation](Resources/Images/aapl_trade_evaluation.png)
 ---
-# Conclusion, and how to improve moving forward
+# Conclusion
 ![Automation1](Resources/Images/automation1.JPG)
 ![Automation2](Resources/Images/automation2.JPG)
 ---
 # Additional Sources
 > https://pyflux.readthedocs.io/en/latest/egarch.html
+
 > https://towardsdatascience.com/time-series-forecasting-with-2d-convolutions-4f1a0f33dff6
+
 > https://deepdatascience.wordpress.com/2016/11/18/which-lstm-optimizer-to-use/
+
 > https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
+
 > https://pypi.org/project/yfinance/
+
 > https://core.ac.uk/download/pdf/42337476.pdf
